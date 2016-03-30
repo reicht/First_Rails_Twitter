@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+
+  get '' => 'users#index'
+
+  get 'tweets' => 'tweets#index'
+
+  get 'users' => 'users#index'
+
+  get 'users/:id' => 'users#show'
+
+  get 'tweets/:id' => 'tweets#show'
+
+  get 'tweets/page/:page' => 'tweets#index'
+
+  get 'tweets/index'
+
+  get 'tweets/show'
+
   get 'users/index'
 
   get 'users/show'

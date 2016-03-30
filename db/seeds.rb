@@ -6,6 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-rand(10..100).times do
-  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
+rand(5..25).times do
+  user = User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
+  rand(3..15).times do
+    Tweet.create(user_id: user.id, body: Faker::Hipster.sentence(4, false, 3))
+  end
 end

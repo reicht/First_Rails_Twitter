@@ -7,6 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+      <a href="http://localhost:3000/">
+        <div class="top-bar-home">
+        <p>Home</p>
+      </div></a>
+      <a href="http://localhost:3000/users">
+        <div class="top-bar-users">
+        <p>Users</p>
+      </div></a>
+      <a href="http://localhost:3000/tweets/page/1">
+        <div class="top-bar-tweets">
+        <p>Tweets</p>
+      </div></a>
+      <a href="#">
+        <div class="top-bar-posts">
+        <p>Create</p>
+      </div></a>
+    </header>
 
 <%= yield %>
 

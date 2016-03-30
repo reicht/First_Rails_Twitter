@@ -1,2 +1,10 @@
 <h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h2> User: <%=@user.id%></h2>
+<p>First: <%=@user.first_name%> Last: <%=@user.last_name%></p>
+<br><hr><br>
+Tweets:<br><hr>
+<%@tweets.each do |x|%>
+  <br>
+  <%=x.body%>
+  <br>
+<%end%>
