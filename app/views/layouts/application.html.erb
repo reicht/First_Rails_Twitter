@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Chirp</title>
+  <link rel="stylesheet" text="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -16,7 +17,7 @@
         <div class="top-bar-users">
         <p>Users</p>
       </div></a>
-      <a href="http://localhost:3000/tweets/page/1">
+      <a href="http://localhost:3000/tweets?page=1">
         <div class="top-bar-tweets">
         <p>Tweets</p>
       </div></a>
@@ -25,8 +26,8 @@
         <p>Create</p>
       </div></a>
     </header>
-
+    <section>
 <%= yield %>
-
-</body>
+    </section>
+  </body>
 </html>

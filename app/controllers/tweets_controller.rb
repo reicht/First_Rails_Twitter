@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   def index
-    @page = params["page"].to_i
+    @page = (params["page"] || 1).to_i
     tweets = (((@page - 1) * 25)..((@page) * 25))
     @tweets = Tweet.where(id: tweets)
     render template: '/tweets/index.html.erb'

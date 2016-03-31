@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get 'tweets/:id' => 'tweets#show'
 
-  get 'tweets/page/:page' => 'tweets#index'
+  get 'tweets/?page' => 'tweets#index'
 
   get 'tweets/index'
 
