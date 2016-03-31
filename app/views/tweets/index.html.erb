@@ -1,7 +1,9 @@
 <h1>Tweets#index</h1>
 <div>
   <% @tweets.each do |x|%>
+  <a href="http://localhost:3000/tweets/<%=x.id%>">
     Body: <%=x.body%>
+  </a>
   <br><br>
   <%end%>
 </div>
